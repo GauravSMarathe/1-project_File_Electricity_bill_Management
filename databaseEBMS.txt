@@ -1,0 +1,51 @@
+create database tables_in_elect;
+
+use  tables_in_elect;
+
+create table login(
+meter_no varchar(30),
+username varchar(30),
+passsword varchar(30),
+user varchar(30),
+question varchar(40),
+answer varchar(30));
+
+create table customer(
+name varchar(30),
+meter_no varchar(30) not null primary key,
+address varchar(50),
+city varchar(30),
+state varchar(30),
+email varchar(30),
+phone varchar(30));
+
+create table rent(
+cost_per_unit int not null primary key,
+meter_rent int,
+service_charge int);
+create table tax(
+service_tax int not null primary key,
+swach_bharat_cess int,
+gst int);
+
+create table bill (
+meter_no varchar(30),
+month varchar(20),
+unit int,total_bill int,
+status varchar(40));
+
+create table meter_info
+(meter_no varchar(30) primary key,
+meter_location  varchar(10),
+meter_Type varchar(15),
+phase_code int,
+bill_type varchar(15),
+days int);
+insert into meter_info values('A11','jalgoan','residencial',415001,'1-month bill',28);
+insert into meter_info values('A12','jalgoan','business',415005,'3-month bill',90);
+insert into meter_info values('A12','dhule','residencial',424003,'2-month bill',66);
+
+
+
+
+
